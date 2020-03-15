@@ -20,16 +20,14 @@ class TagsController < ApplicationController
     render json: {quotes:  @quotes.quotes} , except: [:created_at, :_id, :quote_ids, :created_at, :updated_at, :tag_id]
   end
 
-  def crawler(tag_search, page)
+  def search_for_quotes(tag_search, page)
     doc = Nokogiri::HTML(open(BASE_URL+'/tag/'+tag_search+'/page/'+page.to_s))
+    if !(doc.css(".row").to_s.index(/No quotes found!/i)).nil?
+     return false
+    end
     tag = Tag.create!(name: tag_search)
     items =  doc.css ".quote"
     items.each do |item|
-
-      #tags = item.css(".tags .tag").map {|i| i.content}    
-      #quote = item.css(".text").first.content
-      #author = item.css(".author").first.content
-      #author_about =  BASE_URL + item.css("a").first['href']
       q = Quote.create!(
           quote: item.css(".text").first.content,
           author: item.css(".author").first.content,
@@ -38,17 +36,22 @@ class TagsController < ApplicationController
           tag: tag
       )   
     end
+    return true
   end
 
   private
     def set_quotes_from_tag
       @quotes = Tag.where(name: params[:tag])[0]
       if !@quotes
-         crawler(params[:tag], 1)
+        if search_for_quotes(params[:tag], 1)
+          @quotes = Tag.where(name: params[:tag])[0]
+        elsif
+          render status: :not_found
+        end
       end
-      @quotes = Tag.where(name: params[:tag])[0]
+      
       if !@quotes
-        render status: :not_found
+        
       end
     end
 

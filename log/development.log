@@ -26868,3 +26868,563 @@ Completed 200 OK in 931ms (Views: 1.2ms | MongoDB: 0.0ms | Allocations: 9537)
 
 MONGODB | [52] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47022911806640 type=uuid data=0x8a287988f0c344a8...>}]}
 MONGODB | [52] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 19:46:34 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.2ms | MongoDB: 0.0ms | Allocations: 265)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:48:54 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:66: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/tags_controller.rb:66: syntax error, unexpected end, expecting end-of-input
+app/controllers/tags_controller.rb:66: syntax error, unexpected end, expecting end-of-input
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:49:13 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 275)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 19:49:18 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 212)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:49:23 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:49:40 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70241406737100 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70241036030040 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-15 22:49:40 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.00140211>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [9] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ead5bf831a32bb02a9fc8')}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [9] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 19ms (Views: 1.7ms | MongoDB: 0.0ms | Allocations: 14229)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:51:01 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [10] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [10] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [11] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [11] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ead5bf831a32bb02a9fc8')}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [12] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 10ms (Views: 1.7ms | MongoDB: 0.0ms | Allocations: 10202)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:51:18 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [13] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [13] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [14] localhost:27017 | crawler_development.find | SUCCEEDED | 0.001s
+MONGODB | [15] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ead5bf831a32bb02a9fc8')}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [15] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 12ms (Views: 1.6ms | MongoDB: 0.0ms | Allocations: 10213)
+
+
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:51:28 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | [16] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [16] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 1452ms (MongoDB: 0.0ms | Allocations: 8208)
+
+
+  
+NoMethodError (undefined method `content' for []:Nokogiri::XML::NodeSet):
+  
+app/controllers/tags_controller.rb:26:in `crawler'
+app/controllers/tags_controller.rb:46:in `set_quotes_from_tag'
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:51:47 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | [17] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [17] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 1044ms (MongoDB: 0.0ms | Allocations: 6536)
+
+
+  
+NoMethodError (undefined method `fisrt' for []:Nokogiri::XML::NodeSet
+Did you mean?  first):
+  
+app/controllers/tags_controller.rb:26:in `crawler'
+app/controllers/tags_controller.rb:46:in `set_quotes_from_tag'
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:51:55 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | [18] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [18] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 1066ms (MongoDB: 0.0ms | Allocations: 9885)
+
+
+  
+NoMethodError (undefined method `fisrt' for #<Nokogiri::XML::NodeSet:0x00007fc4c40093e0>
+Did you mean?  first):
+  
+app/controllers/tags_controller.rb:26:in `crawler'
+app/controllers/tags_controller.rb:46:in `set_quotes_from_tag'
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:52:04 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | [19] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [19] localhost:27017 | crawler_development.find | SUCCEEDED | 0.001s
+Completed 500 Internal Server Error in 2057ms (MongoDB: 0.0ms | Allocations: 9844)
+
+
+  
+NoMethodError (undefined method `content' for #<Nokogiri::XML::NodeSet:0x000055828a9de830>):
+  
+app/controllers/tags_controller.rb:26:in `crawler'
+app/controllers/tags_controller.rb:46:in `set_quotes_from_tag'
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:52:18 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | [20] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [20] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [21] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [21] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1037ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6365)
+
+
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:52:53 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | [22] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [22] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [23] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}}
+MONGODB | [23] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1124ms (Views: 0.2ms | MongoDB: 0.0ms | Allocations: 6365)
+
+
+MONGODB | [24] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70241036579400 type=uuid data=0x12e2f033d5c14f62...>}]}
+MONGODB | [24] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:55:04 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:70: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/tags_controller.rb:70: syntax error, unexpected end-of-input, expecting end
+app/controllers/tags_controller.rb:70: syntax error, unexpected end-of-input, expecting end
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:55:14 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 308)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 19:55:26 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started GET "/quotes/friendships" for 127.0.0.1 at 2020-03-15 19:55:40 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendships"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70276335807220 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70275966730120 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-15 22:55:40 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001039542>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendships"}, "lsid"=>{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1536ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 14294)
+
+
+Started GET "/quotes/friendshipssss" for 127.0.0.1 at 2020-03-15 19:55:50 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssss"}
+MONGODB | [9] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}}
+MONGODB | [9] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [10] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}}
+MONGODB | [10] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1060ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 3111)
+
+
+Started GET "/quotes/friendshipssss" for 127.0.0.1 at 2020-03-15 19:56:20 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssss"}
+MONGODB | [11] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}}
+MONGODB | [11] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}}
+MONGODB | [12] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 990ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6476)
+
+
+MONGODB | [13] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70275966722460 type=uuid data=0x672b7c7a4c544ad1...>}]}
+MONGODB | [13] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47066658156200 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70138762146600 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-15 22:56:42 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001012768>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.dropDatabase | STARTED | {"dropDatabase"=>1, "lsid"=>{"id"=><BSON::Binary:0x70138728585720 type=uuid data=0xb2de738586ee4d95...>}}
+MONGODB | [7] localhost:27017 | crawler_development.dropDatabase | SUCCEEDED | 0.026s
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70138728585720 type=uuid data=0xb2de738586ee4d95...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:56:48 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47110038063020 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47110038151540 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-15 22:56:48 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001151976>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x47110038206460 type=uuid data=0x1f9f084952754be1...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x47110038206460 type=uuid data=0x1f9f084952754be1...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1015ms (Views: 0.2ms | MongoDB: 0.0ms | Allocations: 14551)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:57:51 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [9] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x47110038206460 type=uuid data=0x1f9f084952754be1...>}}
+MONGODB | [9] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 987ms (MongoDB: 0.0ms | Allocations: 6432)
+
+
+  
+NoMethodError (undefined method `nil' for nil:NilClass):
+  
+app/controllers/tags_controller.rb:26:in `crawler'
+app/controllers/tags_controller.rb:49:in `set_quotes_from_tag'
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:58:26 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [10] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x47110038206460 type=uuid data=0x1f9f084952754be1...>}}
+MONGODB | [10] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 976ms (MongoDB: 0.0ms | Allocations: 6418)
+
+
+  
+NoMethodError (undefined method `nil' for nil:NilClass):
+  
+app/controllers/tags_controller.rb:26:in `crawler'
+app/controllers/tags_controller.rb:49:in `set_quotes_from_tag'
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:59:41 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:25: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+    puts '------------------'
+         ^):
+  
+app/controllers/tags_controller.rb:25: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/controllers/tags_controller.rb:25: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+MONGODB | [11] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47110038206460 type=uuid data=0x1f9f084952754be1...>}]}
+MONGODB | [11] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 19:59:44 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:25: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+    puts '------------------'
+         ^):
+  
+app/controllers/tags_controller.rb:25: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/controllers/tags_controller.rb:25: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:00:04 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+      puts "é vazio"
+           ^
+/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:71: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/tags_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/controllers/tags_controller.rb:71: syntax error, unexpected end, expecting end-of-input
+app/controllers/tags_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/controllers/tags_controller.rb:71: syntax error, unexpected end, expecting end-of-input
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:00:47 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47322166648860 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47322170950100 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-15 23:00:47 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000772366>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1435ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 14477)
+
+
+Started GET "/quotes/friendshipssss" for 127.0.0.1 at 2020-03-15 20:00:55 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssss"}
+MONGODB | [9] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [9] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [10] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [10] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 978ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 3001)
+
+
+Started GET "/quotes/friendshipssss" for 127.0.0.1 at 2020-03-15 20:01:39 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssss"}
+MONGODB | [11] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [11] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssss"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [12] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 989ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6361)
+
+
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:01:51 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | [13] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [13] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [14] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 967ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 2997)
+
+
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:02:04 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | [15] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [15] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [16] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}}
+MONGODB | [16] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1010ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6357)
+
+
+MONGODB | [17] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47322171311300 type=uuid data=0x3cabf00882114277...>}]}
+MONGODB | [17] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:02:14 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x46949202329420 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x46949202371240 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-15 23:02:14 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000930441>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 965ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 14354)
+
+
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:02:49 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | [9] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [9] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [10] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [10] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 948ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6375)
+
+
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:03:02 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | [11] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [11] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [12] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 962ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6366)
+
+
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:04:09 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | [13] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [13] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [14] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 986ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6374)
+
+
+Started GET "/quotes/friendshipssssasdasd" for 127.0.0.1 at 2020-03-15 20:04:25 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipssssasdasd"}
+MONGODB | [15] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [15] localhost:27017 | crawler_development.find | SUCCEEDED | 0.009s
+MONGODB | [16] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipssssasdasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [16] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1677ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 6349)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:04:35 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [17] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [17] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [18] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"tags", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f70'), "name"=>"friendship", "updated_at"=>2020-03-15 23:04:36 UTC, "created_at"=>2020-03-15 23:04:36 UTC}], "lsid"=>{"id"=><BSON::Binary:0x46949202433820 t...
+MONGODB | [18] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.922s
+MONGODB | [19] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f71'), "quote"=>"“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”", "author"=>"Friedrich Nietzsche", "author_about"=>"ht...
+MONGODB | [19] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.022s
+MONGODB | [20] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f72'), "quote"=>"“Good friends, good books, and a sleepy conscience: this is the ideal life.”", "author"=>"Mark Twain", "author_about"=>"http://quotes.tos...
+MONGODB | [20] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [21] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f73'), "quote"=>"“The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.”", "author"=>"Bob Marley", "author_about...
+MONGODB | [21] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [22] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f74'), "quote"=>"“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”"...
+MONGODB | [22] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [23] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f75'), "quote"=>"“If I had a flower for every time I thought of you...I could walk through my garden forever.”", "author"=>"Alfred Tennyson", "author_abou...
+MONGODB | [23] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [24] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [24] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [25] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f70')}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [25] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 1912ms (Views: 1.2ms | MongoDB: 0.9ms | Allocations: 14290)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:04:44 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [26] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [26] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [27] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [27] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [28] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f70')}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [28] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 3ms (Views: 1.2ms | MongoDB: 0.0ms | Allocations: 2909)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:06:34 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+...tag \"#{params[:tag]}\""}status: :not_found
+...                         ^~~~~~):
+  
+app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:07:01 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+... \"#{ params[:tag] }\""} status: :not_found
+...                         ^~~~~~):
+  
+app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:07:14 -0300
+  
+SyntaxError (/home/ricardo/Desktop/crawler_api/app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+...encontrada para a tag "} status: :not_found
+...                         ^~~~~~):
+  
+app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+app/controllers/tags_controller.rb:49: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:07:33 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 261)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 20:07:38 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 211)
+
+
+Started GET "/quotes/friendship" for 127.0.0.1 at 2020-03-15 20:07:47 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendship"}
+MONGODB | [29] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendship"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [29] localhost:27017 | crawler_development.find | SUCCEEDED | 0.001s
+MONGODB | [30] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6eb484f831a33a4cb21f70')}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [30] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 13ms (Views: 1.9ms | MongoDB: 0.0ms | Allocations: 10536)
+
+
+Started GET "/quotes/friendshipasd" for 127.0.0.1 at 2020-03-15 20:07:56 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipasd"}
+MONGODB | [31] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [31] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1373ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 2425)
+
+
+Started GET "/quotes/friendshipasd" for 127.0.0.1 at 2020-03-15 20:08:11 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipasd"}
+MONGODB | [32] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [32] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1040ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 2423)
+
+
+Started GET "/quotes/friendshipasd" for 127.0.0.1 at 2020-03-15 20:08:29 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"friendshipasd"}
+MONGODB | [33] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"friendshipasd"}, "lsid"=>{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}}
+MONGODB | [33] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Filter chain halted as :set_quotes_from_tag rendered or redirected
+Completed 404 Not Found in 1009ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 5802)
+
+
+MONGODB | [34] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x46949202433820 type=uuid data=0x6b2b1161005f4d5f...>}]}
+MONGODB | [34] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
