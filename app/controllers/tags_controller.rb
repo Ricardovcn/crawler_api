@@ -19,8 +19,11 @@ class TagsController < ApplicationController
 
   def search_for_quotes(tag_search, page)
     puts "Extraindo da página #{page}"
-
-    doc = Nokogiri::HTML(open(BASE_URL+'/tag/'+tag_search+'/page/'+page.to_s))
+    begin
+      doc = Nokogiri::HTML(open(BASE_URL+'/tag/'+tag_search+'/page/'+page.to_s))
+      rescue
+        return false
+    end
     if !(doc.css(".row").to_s.index(/No quotes found/i)).nil?
      return false
     end
