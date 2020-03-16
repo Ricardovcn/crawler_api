@@ -16,6 +16,8 @@ namespace :dev do
                     tags: Faker::Lorem.words(number: 4),
                     tag: tag
                 )   
+                tag.quotes << q
+                tag.save
             end
         end
     end

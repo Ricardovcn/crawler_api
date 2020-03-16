@@ -29816,3 +29816,98 @@ Completed 200 OK in 4ms (Views: 2.9ms | MongoDB: 0.0ms | Allocations: 3665)
 
 MONGODB | [29] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47214743673960 type=uuid data=0xed58c444ea4e4df5...>}]}
 MONGODB | [29] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/" for ::1 at 2020-03-15 21:26:41 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ricardo/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ricardo/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.2ms | Allocations: 299)
+Completed 200 OK in 8ms (Views: 6.7ms | MongoDB: 0.0ms | Allocations: 1520)
+
+
+Started GET "/qinfo" for ::1 at 2020-03-15 21:26:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/qinfo"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:27:57 -0300
+Processing by TagsController#index as */*
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 310)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:28:12 -0300
+Processing by TagsController#index as */*
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 21:28:17 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 223)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 21:28:27 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 191)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 21:28:29 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 192)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 21:28:29 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 192)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:28:39 -0300
+Processing by TagsController#index as */*
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 175)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:28:48 -0300
+Processing by TagsController#index as */*
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70251807564480 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70251437905720 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:28:48 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000840108>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x70251437930820 type=uuid data=0xf316cac55f464a06...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 12ms (Views: 4.4ms | MongoDB: 0.0ms | Allocations: 8161)
+
+
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70251437930820 type=uuid data=0xf316cac55f464a06...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
