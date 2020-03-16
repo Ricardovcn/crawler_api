@@ -29911,3 +29911,434 @@ Completed 200 OK in 12ms (Views: 4.4ms | MongoDB: 0.0ms | Allocations: 8161)
 
 MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70251437930820 type=uuid data=0xf316cac55f464a06...>}]}
 MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47266485871720 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70145607224480 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:52:30 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.00098117>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.dropDatabase | STARTED | {"dropDatabase"=>1, "lsid"=>{"id"=><BSON::Binary:0x70145607249740 type=uuid data=0x13b1516416c24d0b...>}}
+MONGODB | [7] localhost:27017 | crawler_development.dropDatabase | SUCCEEDED | 0.021s
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70145607249740 type=uuid data=0x13b1516416c24d0b...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:52:39 -0300
+Processing by TagsController#index as */*
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | MongoDB: 0.0ms | Allocations: 311)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:52:47 -0300
+Processing by TagsController#index as */*
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:52:59 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started GET "/quotes/love" for ::1 at 2020-03-15 21:53:10 -0300
+Processing by TagsController#show as HTML
+  Parameters: {"tag"=>"love"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 88)
+
+
+Started POST "/auth" for 127.0.0.1 at 2020-03-15 21:53:20 -0300
+Processing by AuthController#create as */*
+  Parameters: {"name"=>"jose", "auth"=>{"name"=>"jose"}}
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:53:34 -0300
+Processing by TagsController#index as */*
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | MongoDB: 0.0ms | Allocations: 229)
+
+
+Started GET "/quotes/" for 127.0.0.1 at 2020-03-15 21:53:46 -0300
+Processing by TagsController#index as */*
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x46966609613460 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x46966609664320 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:53:46 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.00094094>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x46966609671660 type=uuid data=0xa6be772acb514b4f...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 9ms (Views: 4.6ms | MongoDB: 0.0ms | Allocations: 6998)
+
+
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:53:50 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x46966609671660 type=uuid data=0xa6be772acb514b4f...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 10016ms (MongoDB: 0.0ms | Allocations: 6028)
+
+
+  
+SocketError (Failed to open TCP connection to quotes.toscrape.com:80 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/tags_controller.rb:23:in `search_for_quotes'
+app/controllers/tags_controller.rb:53:in `set_quotes_from_tag'
+MONGODB | [9] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x46966609671660 type=uuid data=0xa6be772acb514b4f...>}]}
+MONGODB | [9] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:54:28 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47394106039360 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47394106071480 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:54:28 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000670851>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47394106150680 type=uuid data=0x32b92c91d7614469...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"tags", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b77'), "name"=>"love", "updated_at"=>2020-03-16 00:54:34 UTC, "created_at"=>2020-03-16 00:54:34 UTC}], "lsid"=>{"id"=><BSON::Binary:0x47394106150680 type=uu...
+MONGODB | [8] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.020s
+MONGODB | [9] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b78'), "quote"=>"“It is better to be hated for what you are than to be loved for what you are not.”", "author"=>"André Gide", "author_about"=>"http://quot...
+MONGODB | [9] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.020s
+MONGODB | [10] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b79'), "quote"=>"“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get t...
+MONGODB | [10] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [11] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b7a'), "quote"=>"“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's...
+MONGODB | [11] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b7b'), "quote"=>"“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is no...
+MONGODB | [12] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [13] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b7c'), "quote"=>"“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”", "author"=>"Friedrich Nietzsche", "author_about"=>"ht...
+MONGODB | [13] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b7d'), "quote"=>"“I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I d...
+MONGODB | [14] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [15] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b7e'), "quote"=>"“If you can make a woman laugh, you can make her do anything.”", "author"=>"Marilyn Monroe", "author_about"=>"http://quotes.toscrape.com/...
+MONGODB | [15] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [16] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b7f'), "quote"=>"“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”", "author"=...
+MONGODB | [16] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [17] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b80'), "quote"=>"“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”", "author"=>"James...
+MONGODB | [17] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [18] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4af831a36817c04b81'), "quote"=>"“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”"...
+MONGODB | [18] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [19] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47394106150680 type=uuid data=0x32b92c91d7614469...>}}
+MONGODB | [19] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [20] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4bf831a36817c04b82'), "quote"=>"“To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping ...
+MONGODB | [20] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [21] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4bf831a36817c04b83'), "quote"=>"“If I had a flower for every time I thought of you...I could walk through my garden forever.”", "author"=>"Alfred Tennyson", "author_abou...
+MONGODB | [21] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [22] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4bf831a36817c04b84'), "quote"=>"“A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.”", "author"=>"Jane Austen", "a...
+MONGODB | [22] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [23] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece4bf831a36817c04b85'), "quote"=>"“To die will be an awfully big adventure.”", "author"=>"J.M. Barrie", "author_about"=>"http://quotes.toscrape.com/author/J-M-Barrie", "ta...
+MONGODB | [23] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [24] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47394106150680 type=uuid data=0x32b92c91d7614469...>}}
+MONGODB | [24] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [25] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ece4af831a36817c04b77')}, "lsid"=>{"id"=><BSON::Binary:0x47394106150680 type=uuid data=0x32b92c91d7614469...>}}
+MONGODB | [25] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 7412ms (Views: 2.2ms | MongoDB: 0.0ms | Allocations: 37202)
+
+
+MONGODB | [26] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47394106150680 type=uuid data=0x32b92c91d7614469...>}]}
+MONGODB | [26] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47350653792660 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x69815431624800 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:54:47 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000860687>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.dropDatabase | STARTED | {"dropDatabase"=>1, "lsid"=>{"id"=><BSON::Binary:0x69815431641480 type=uuid data=0xabe289830dc04fa9...>}}
+MONGODB | [7] localhost:27017 | crawler_development.dropDatabase | SUCCEEDED | 0.011s
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69815431641480 type=uuid data=0xabe289830dc04fa9...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:54:53 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47043658279160 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47043658368800 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:54:53 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000797537>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"tags", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98272'), "name"=>"love", "updated_at"=>2020-03-16 00:55:01 UTC, "created_at"=>2020-03-16 00:55:01 UTC}], "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uu...
+MONGODB | [8] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.061s
+MONGODB | [9] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98273'), "quote"=>"“It is better to be hated for what you are than to be loved for what you are not.”", "author"=>"André Gide", "author_about"=>"http://quot...
+MONGODB | [9] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.021s
+MONGODB | [10] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98274'), "quote"=>"“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get t...
+MONGODB | [10] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [11] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98275'), "quote"=>"“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's...
+MONGODB | [11] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98276'), "quote"=>"“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is no...
+MONGODB | [12] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [13] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98277'), "quote"=>"“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”", "author"=>"Friedrich Nietzsche", "author_about"=>"ht...
+MONGODB | [13] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98278'), "quote"=>"“I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I d...
+MONGODB | [14] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [15] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a98279'), "quote"=>"“If you can make a woman laugh, you can make her do anything.”", "author"=>"Marilyn Monroe", "author_about"=>"http://quotes.toscrape.com/...
+MONGODB | [15] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [16] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a9827a'), "quote"=>"“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”", "author"=...
+MONGODB | [16] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [17] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a9827b'), "quote"=>"“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”", "author"=>"James...
+MONGODB | [17] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [18] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece65f831a36894a9827c'), "quote"=>"“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”"...
+MONGODB | [18] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [19] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [19] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [20] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece66f831a36894a9827d'), "quote"=>"“To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping ...
+MONGODB | [20] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [21] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece66f831a36894a9827e'), "quote"=>"“If I had a flower for every time I thought of you...I could walk through my garden forever.”", "author"=>"Alfred Tennyson", "author_abou...
+MONGODB | [21] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [22] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece66f831a36894a9827f'), "quote"=>"“A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.”", "author"=>"Jane Austen", "a...
+MONGODB | [22] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [23] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece66f831a36894a98280'), "quote"=>"“To die will be an awfully big adventure.”", "author"=>"J.M. Barrie", "author_about"=>"http://quotes.toscrape.com/author/J-M-Barrie", "ta...
+MONGODB | [23] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [24] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [24] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [25] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ece65f831a36894a98272')}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [25] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 8744ms (Views: 2.4ms | MongoDB: 0.1ms | Allocations: 37125)
+
+
+Started GET "/quotes/life" for 127.0.0.1 at 2020-03-15 21:55:31 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"life"}
+MONGODB | [26] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [26] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [27] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"tags", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98281'), "name"=>"life", "updated_at"=>2020-03-16 00:55:32 UTC, "created_at"=>2020-03-16 00:55:32 UTC}], "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uu...
+MONGODB | [27] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [28] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98282'), "quote"=>"“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”", "au...
+MONGODB | [28] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [29] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98283'), "quote"=>"“It is better to be hated for what you are than to be loved for what you are not.”", "author"=>"André Gide", "author_about"=>"http://quot...
+MONGODB | [29] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [30] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98284'), "quote"=>"“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get t...
+MONGODB | [30] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [31] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98285'), "quote"=>"“I may not have gone where I intended to go, but I think I have ended up where I needed to be.”", "author"=>"Douglas Adams", "author_abou...
+MONGODB | [31] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [32] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98286'), "quote"=>"“Good friends, good books, and a sleepy conscience: this is the ideal life.”", "author"=>"Mark Twain", "author_about"=>"http://quotes.tos...
+MONGODB | [32] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [33] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98287'), "quote"=>"“Life is what happens to us while we are making other plans.”", "author"=>"Allen Saunders", "author_about"=>"http://quotes.toscrape.com/a...
+MONGODB | [33] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [34] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98288'), "quote"=>"“Today you are You, that is truer than true. There is no one alive who is Youer than You.”", "author"=>"Dr. Seuss", "author_about"=>"http...
+MONGODB | [34] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [35] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a98289'), "quote"=>"“Life is like riding a bicycle. To keep your balance, you must keep moving.”", "author"=>"Albert Einstein", "author_about"=>"http://quote...
+MONGODB | [35] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [36] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a9828a'), "quote"=>"“Life isn't about finding yourself. Life is about creating yourself.”", "author"=>"George Bernard Shaw", "author_about"=>"http://quotes.t...
+MONGODB | [36] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [37] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece84f831a36894a9828b'), "quote"=>"“Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon ...
+MONGODB | [37] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [38] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [38] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [39] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece85f831a36894a9828c'), "quote"=>"“The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.”", "author"=>"Mark Twain", "autho...
+MONGODB | [39] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [40] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece85f831a36894a9828d'), "quote"=>"“I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to.”", "author"=>"Jimi Hendrix", "auth...
+MONGODB | [40] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [41] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ece85f831a36894a9828e'), "quote"=>"“But better to get hurt by the truth than comforted with a lie.”", "author"=>"Khaled Hosseini", "author_about"=>"http://quotes.toscrape.c...
+MONGODB | [41] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [42] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [42] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [43] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ece84f831a36894a98281')}, "lsid"=>{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}}
+MONGODB | [43] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 2016ms (Views: 2.2ms | MongoDB: 0.0ms | Allocations: 20068)
+
+
+MONGODB | [44] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47043658440400 type=uuid data=0xdd69617c13e448ee...>}]}
+MONGODB | [44] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x70136513970840 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x70136480431240 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:56:18 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001195467>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.dropDatabase | STARTED | {"dropDatabase"=>1, "lsid"=>{"id"=><BSON::Binary:0x70136480424340 type=uuid data=0x9441679c47a644ef...>}}
+MONGODB | [7] localhost:27017 | crawler_development.dropDatabase | SUCCEEDED | 0.013s
+MONGODB | [8] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70136480424340 type=uuid data=0x9441679c47a644ef...>}]}
+MONGODB | [8] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/" for 127.0.0.1 at 2020-03-15 21:56:25 -0300
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/ricardo/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ricardo/.rvm/gems/ruby-2.6.3/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 299)
+Completed 200 OK in 6ms (Views: 5.4ms | MongoDB: 0.0ms | Allocations: 1560)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2020-03-15 21:56:28 -0300
+Processing by TagsController#index as */*
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47087631504620 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47087631553500 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:56:28 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.000702489>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 9ms (Views: 3.9ms | MongoDB: 0.0ms | Allocations: 7100)
+
+
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:56:33 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+MONGODB | [8] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [8] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [9] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"tags", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e517'), "name"=>"love", "updated_at"=>2020-03-16 00:56:34 UTC, "created_at"=>2020-03-16 00:56:34 UTC}], "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uu...
+MONGODB | [9] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.021s
+MONGODB | [10] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e518'), "quote"=>"“It is better to be hated for what you are than to be loved for what you are not.”", "author"=>"André Gide", "author_about"=>"http://quot...
+MONGODB | [10] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.021s
+MONGODB | [11] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e519'), "quote"=>"“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get t...
+MONGODB | [11] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e51a'), "quote"=>"“You may not be her first, her last, or her only. She loved before she may love again. But if she loves you now, what else matters? She's...
+MONGODB | [12] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [13] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e51b'), "quote"=>"“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is no...
+MONGODB | [13] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e51c'), "quote"=>"“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”", "author"=>"Friedrich Nietzsche", "author_about"=>"ht...
+MONGODB | [14] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [15] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e51d'), "quote"=>"“I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I d...
+MONGODB | [15] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [16] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e51e'), "quote"=>"“If you can make a woman laugh, you can make her do anything.”", "author"=>"Marilyn Monroe", "author_about"=>"http://quotes.toscrape.com/...
+MONGODB | [16] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [17] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e51f'), "quote"=>"“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”", "author"=...
+MONGODB | [17] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [18] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e520'), "quote"=>"“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”", "author"=>"James...
+MONGODB | [18] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [19] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e521'), "quote"=>"“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”"...
+MONGODB | [19] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [20] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [20] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [21] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec8f831a36960e1e522'), "quote"=>"“To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping ...
+MONGODB | [21] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [22] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec8f831a36960e1e523'), "quote"=>"“If I had a flower for every time I thought of you...I could walk through my garden forever.”", "author"=>"Alfred Tennyson", "author_abou...
+MONGODB | [22] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [23] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec8f831a36960e1e524'), "quote"=>"“A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.”", "author"=>"Jane Austen", "a...
+MONGODB | [23] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [24] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecec8f831a36960e1e525'), "quote"=>"“To die will be an awfully big adventure.”", "author"=>"J.M. Barrie", "author_about"=>"http://quotes.toscrape.com/author/J-M-Barrie", "ta...
+MONGODB | [24] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [25] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [25] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [26] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e517')}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [26] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 7437ms (Views: 3.1ms | MongoDB: 0.0ms | Allocations: 30897)
+
+
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:56:48 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+MONGODB | [27] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [27] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [28] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e517')}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [28] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 4ms (Views: 2.0ms | MongoDB: 0.0ms | Allocations: 3813)
+
+
+Started GET "/quotes/love" for 127.0.0.1 at 2020-03-15 21:56:49 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"love"}
+MONGODB | [29] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"love"}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [29] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [30] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ecec2f831a36960e1e517')}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [30] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 4ms (Views: 2.2ms | MongoDB: 0.0ms | Allocations: 3813)
+
+
+Started GET "/quotes/life" for 127.0.0.1 at 2020-03-15 21:56:53 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"life"}
+MONGODB | [31] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}}
+MONGODB | [31] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 500 Internal Server Error in 10010ms (MongoDB: 0.0ms | Allocations: 1130)
+
+
+  
+SocketError (Failed to open TCP connection to quotes.toscrape.com:80 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/tags_controller.rb:23:in `search_for_quotes'
+app/controllers/tags_controller.rb:53:in `set_quotes_from_tag'
+MONGODB | [32] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47087631600500 type=uuid data=0x9989aac495c74471...>}]}
+MONGODB | [32] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started GET "/quotes/life" for 127.0.0.1 at 2020-03-15 21:59:55 -0300
+Processing by TagsController#show as */*
+  Parameters: {"tag"=>"life"}
+MONGODB | EVENT: #<TopologyOpening topology=Unknown[]>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[] new=Unknown[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Unknown'.
+MONGODB | EVENT: #<ServerOpening address=localhost:27017 topology=Unknown[localhost:27017]>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 3.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | EVENT: #<ServerDescriptionChanged address=localhost:27017 topology=Single[localhost:27017] prev=#<Mongo::Server:Description:0x47308915656420 config={} average_round_trip_time=> new=#<Mongo::Server:Description:0x47308915722920 config={"ismaster"=>true, "maxBsonObjectSize"=>16777216, "maxMessageSizeBytes"=>48000000, "maxWriteBatchSize"=>100000, "localTime"=>2020-03-16 00:59:55 UTC, "logicalSessionTimeoutMinutes"=>30, "minWireVersion"=>0, "maxWireVersion"=>6, "readOnly"=>false, "ok"=>1.0} average_round_trip_time=0.001471035>>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<TopologyChanged prev=Unknown[localhost:27017] new=Single[localhost:27017]>
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | [7] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47308915792420 type=uuid data=0x6d25a95a02e04f71...>}}
+MONGODB | [7] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [8] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"tags", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d08e'), "name"=>"life", "updated_at"=>2020-03-16 00:59:56 UTC, "created_at"=>2020-03-16 00:59:56 UTC}], "lsid"=>{"id"=><BSON::Binary:0x47308915792420 type=uu...
+MONGODB | [8] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [9] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d08f'), "quote"=>"“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”", "au...
+MONGODB | [9] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [10] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d090'), "quote"=>"“It is better to be hated for what you are than to be loved for what you are not.”", "author"=>"André Gide", "author_about"=>"http://quot...
+MONGODB | [10] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [11] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d091'), "quote"=>"“This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get t...
+MONGODB | [11] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [12] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d092'), "quote"=>"“I may not have gone where I intended to go, but I think I have ended up where I needed to be.”", "author"=>"Douglas Adams", "author_abou...
+MONGODB | [12] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [13] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d093'), "quote"=>"“Good friends, good books, and a sleepy conscience: this is the ideal life.”", "author"=>"Mark Twain", "author_about"=>"http://quotes.tos...
+MONGODB | [13] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [14] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d094'), "quote"=>"“Life is what happens to us while we are making other plans.”", "author"=>"Allen Saunders", "author_about"=>"http://quotes.toscrape.com/a...
+MONGODB | [14] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [15] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d095'), "quote"=>"“Today you are You, that is truer than true. There is no one alive who is Youer than You.”", "author"=>"Dr. Seuss", "author_about"=>"http...
+MONGODB | [15] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [16] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d096'), "quote"=>"“Life is like riding a bicycle. To keep your balance, you must keep moving.”", "author"=>"Albert Einstein", "author_about"=>"http://quote...
+MONGODB | [16] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [17] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d097'), "quote"=>"“Life isn't about finding yourself. Life is about creating yourself.”", "author"=>"George Bernard Shaw", "author_about"=>"http://quotes.t...
+MONGODB | [17] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [18] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d098'), "quote"=>"“Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon ...
+MONGODB | [18] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [19] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47308915792420 type=uuid data=0x6d25a95a02e04f71...>}}
+MONGODB | [19] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [20] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8df831a36b7549d099'), "quote"=>"“The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.”", "author"=>"Mark Twain", "autho...
+MONGODB | [20] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [21] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8df831a36b7549d09a'), "quote"=>"“I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to.”", "author"=>"Jimi Hendrix", "auth...
+MONGODB | [21] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [22] localhost:27017 #1 | crawler_development.insert | STARTED | {"insert"=>"quotes", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('5e6ecf8df831a36b7549d09b'), "quote"=>"“But better to get hurt by the truth than comforted with a lie.”", "author"=>"Khaled Hosseini", "author_about"=>"http://quotes.toscrape.c...
+MONGODB | [22] localhost:27017 | crawler_development.insert | SUCCEEDED | 0.000s
+MONGODB | [23] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"tags", "filter"=>{"name"=>"life"}, "lsid"=>{"id"=><BSON::Binary:0x47308915792420 type=uuid data=0x6d25a95a02e04f71...>}}
+MONGODB | [23] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+MONGODB | [24] localhost:27017 #1 | crawler_development.find | STARTED | {"find"=>"quotes", "filter"=>{"tag_id"=>BSON::ObjectId('5e6ecf8cf831a36b7549d08e')}, "lsid"=>{"id"=><BSON::Binary:0x47308915792420 type=uuid data=0x6d25a95a02e04f71...>}}
+MONGODB | [24] localhost:27017 | crawler_development.find | SUCCEEDED | 0.000s
+Completed 200 OK in 2658ms (Views: 1.8ms | MongoDB: 0.0ms | Allocations: 36215)
+
+
+MONGODB | [25] localhost:27017 #2 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47308915792420 type=uuid data=0x6d25a95a02e04f71...>}]}
+MONGODB | [25] localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
