@@ -13,19 +13,22 @@ class TagsController < ApplicationController
     render json: @tags
   end
 
-  # GET /tags/1
   def show
-    #@quotes =  @quotes.quotes
-    #@quotes = {"quotes": @quotes.as_json(except: [:created_at, :_id, :quote_ids, :created_at, :updated_at, :tag_id])}
     render json: {quotes:  @quotes.quotes} , except: [:created_at, :_id, :quote_ids, :created_at, :updated_at, :tag_id]
   end
 
   def search_for_quotes(tag_search, page)
+    puts "Extraindo da página #{page}"
+
     doc = Nokogiri::HTML(open(BASE_URL+'/tag/'+tag_search+'/page/'+page.to_s))
-    if !(doc.css(".row").to_s.index(/No quotes found!/i)).nil?
+    if !(doc.css(".row").to_s.index(/No quotes found/i)).nil?
      return false
     end
-    tag = Tag.create!(name: tag_search)
+    if page > 1
+      tag = Tag.where(name: tag_search)[0]
+    elsif
+      tag = Tag.create!(name: tag_search)
+    end
     items =  doc.css ".quote"
     items.each do |item|
       q = Quote.create!(
@@ -35,6 +38,10 @@ class TagsController < ApplicationController
           tags: item.css(".tags .tag").map {|i| i.content},
           tag: tag
       )   
+    end
+    #recursao
+    if !doc.css(".pager .next").first.nil?
+      search_for_quotes(tag_search, (page+1))
     end
     return true
   end
@@ -48,10 +55,6 @@ class TagsController < ApplicationController
         elsif
           render status: :not_found
         end
-      end
-      
-      if !@quotes
-        
       end
     end
 
